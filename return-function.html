@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+         // 1) initiliaze normal function
+         function test(){
+            console.log("first");
+        }
+
+        //invoke
+        test();
+
+        // 2) initilaization auto function
+
+        (function data(){
+            console.log("Second");
+        })()
+
+        // 3) initilaization && return function
+        function test() {
+            let user = {
+                name : "jelly",
+                age : "20",
+                moNumber : 1234567890,
+                adhharNo : 234568854,
+                panNo : 987654321
+            }
+            let schoolInfo = {
+                schooName : "vivekanand",
+            }
+            return {user, ...schoolInfo}
+        }
+
+        //invoke
+        
+        let result = test()
+        console.log(result)
+
+        // 4) arrow with return function
+
+        let main = (a,b) => {
+            let data = {
+                total : a * b,
+                addition : a + b
+            }
+            return data
+        }
+
+        //invoke
+        let add = main(2,5)
+        console.log(add,"This arrow function") 
+
+        // 5) arro function intiliazation
+
+        let arrowFun =  (a,b) => a * b;
+
+        console.log("Single line arrow function",arrowFun(4,5))
+    </script>
+    
+</body>
+</html>
